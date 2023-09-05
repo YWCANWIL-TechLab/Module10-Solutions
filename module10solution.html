@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Module 10: Forms</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/module10.css">
+    </head>
+    <body>
+        <div id="header">
+            <h1>Module 10: Forms</h1>
+            <p>A useful application of JavaScript is input validation. It is much more difficult to work with unformatted data than it
+                is to work with data that has been validated. Additionally, users may enter data that is the wrong type entirely, which 
+                will make our lives even harder. We can solve this by performing input validation.
+            </p>
+        </div>
+        <form name="personForm" onsubmit="oneToTen()" method="post">
+            <h3>Enter some information about yourself.</h3>
+            <label for="firstName">Enter your first name:</label>
+            <input title="firstNameField" id="firstNameInput" type="text" name="firstName">
+
+            <label for="lastName">Enter your last name:</label>
+            <input title="firstNameField" id="lastNameInput" type="text" name="lastName">
+
+            <label for="favoriteNumber">Enter your favorite number (1-10):</label>
+                <input title="favoriteNumber" id="favNum" type="number" name="favoriteNumber" min="0" max="10">
+
+            <label for="languages">Select Your Favorite Programming Language:</label>
+            <select id="languages" onchange="favoriteProgrammingLanguage()">
+                <option value="javascript">JavaScript</option>
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="rust">Rust</option>
+                <option value="c++">C++</option>
+            </select>
+
+            <label for="numberInput">Enter a number between 1 and 100:</label>
+            <input title="randomNumber" id="randomNumber" name="numberInput" type="number" min="1" max="100" required>
+
+            <input id="btn-submit" type="submit" value="Submit" >
+        </form>
+
+        <script src="scripts/ex1-solutions.js" async defer></script>
+    </body>
+</html>

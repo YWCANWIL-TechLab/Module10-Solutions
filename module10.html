@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Module 10: Forms</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/module10.css">
+    </head>
+    <body>
+        <div id="header">
+            <h1 id="h1"><span style="color: blue;">Module 10: Forms</span></h1>
+            <p>
+                A useful application of JavaScript is input validation. It is much more difficult to work with unformatted data than it
+                is to work with data that has been validated. Additionally, users may enter data that is the wrong type entirely, which 
+                will make our lives even harder. We can solve this by performing input validation.
+            </p>
+        </div>
+        <form name="personForm" onsubmit="oneToTen()" method="post" >
+            <h3>Enter some information about yourself.</h3>
+            <label for="firstName">Enter your first name:</label>
+            <input title="firstNameField" id="firstNameInput" type="text" name="firstName">
+
+            <label for="lastName">Enter your last name:</label>
+            <input title="firstNameField" id="lastNameInput" type="text" name="lastName">
+
+            <label for="languages">What is your favorite language?</label>
+            <select id="languages" name="languages" title="Language Dropdown">
+                <option value="Java">Java</option>
+                <option value="Python">Python</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Ruby">Ruby</option>
+            </select>
+
+            <label for="favNum">What is your favorite N</label>
+
+            <input id="btn-submit" type="submit" value="Submit">
+        </form>
+
+        <script src="scripts/ex1-forms.js" async defer></script>
+    </body>
+</html>
